@@ -7,7 +7,7 @@ class App < Sinatra::Base
   end
 
   post '/piglatinize' do
-    pl = PigLatinizer.new
+    pl = PigLatinizer.new   #need to create the new model instance first
     @piglatin = pl.piglatinize(params[:user_phrase])
     erb :results
   end
